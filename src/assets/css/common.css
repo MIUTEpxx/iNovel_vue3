@@ -11,6 +11,12 @@ html {
     这样，所有元素都有了统一的参照标准，改变html文字的大小，就会改变所有元素用rem设置的尺寸大小。 */
   }
 
+  /*测试用的字样式*/
+  .TempTest{
+    color: white; 
+    -webkit-text-stroke: 0.4px red;
+  }
+
 body, input, button, a, textarea, select {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;

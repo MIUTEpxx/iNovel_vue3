@@ -3,6 +3,12 @@ import { createRouter,createWebHashHistory } from "vue-router";
 
 const routes=[
     {
+        //路由重定向
+        path:'/',
+        //任何对根路径的访问都应该被重定向到 /index 路径 即首页
+        redirect:'/index'
+    },
+    {
         //首页
         path:'/index',//路径
         name:'index',//名字
@@ -11,17 +17,17 @@ const routes=[
     {
         path:'/community',//社区
         name:'community',
-        component:()=>import('../views/community/community.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+        component:()=>import('../views/community/index.vue')
     },
     {
         path:'/welfare',//福利
         name:'welfare',
-        component:()=>import('../views/welfare/welfare.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+        component:()=>import('../views/welfare/index.vue')
     },
     {
         path:'/my',//我的
         name:'my',
-        component:()=>import('../views/my/my.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+        component:()=>import('../views/my/index.vue')
     }
 ]
 //创建一个路由实例

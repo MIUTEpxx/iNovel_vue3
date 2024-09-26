@@ -15,6 +15,8 @@ import { ref } from 'vue';// ref是一个用于创建响应式数据的函数
             
             <!-- 路由匹配到的组件将渲染在这里↓ -->
             <router-view></router-view>
+            <!-- 底部导航栏 -->
+             <p class="TempTest">书城 社区 福利 我的</p>
         </div>
 </template>
 
