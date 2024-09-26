@@ -5,12 +5,12 @@ const routes=[
     {
         path:'/',//路径
         name:'Home',//名字
-        component:()=>import('')// 动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+        //component:()=>import('../App.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
     }
 ]
 //创建一个路由实例
 const router=createRouter({
-    history:createWebHashHistory,//创建一个 hash 模式的历史记录管理器
+    history:createWebHashHistory(),//创建一个 hash 模式的历史记录管理器
     routes // routes:routes 键与值名一样 可简写为routes //包含了所有的路由定义的数组
 })
 

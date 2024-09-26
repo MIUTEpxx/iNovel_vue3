@@ -11,6 +11,11 @@ import { ref } from 'vue';// ref是一个用于创建响应式数据的函数
 
 <template>
 
+        <div>
+            
+            <!-- 路由匹配到的组件将渲染在这里↓ -->
+            <router-view></router-view>
+        </div>
 </template>
 
 <!-- scoped表示该样式是局域样式,不会影响其他组件 -->
