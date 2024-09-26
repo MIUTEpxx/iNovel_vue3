@@ -3,9 +3,25 @@ import { createRouter,createWebHashHistory } from "vue-router";
 
 const routes=[
     {
-        path:'/',//路径
-        name:'Home',//名字
-        //component:()=>import('../App.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+        //首页
+        path:'/index',//路径
+        name:'index',//名字
+        component:()=>import('../views/index/index.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+    },
+    {
+        path:'/community',//社区
+        name:'community',
+        component:()=>import('../views/community/community.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+    },
+    {
+        path:'/welfare',//福利
+        name:'welfare',
+        component:()=>import('../views/welfare/welfare.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
+    },
+    {
+        path:'/my',//我的
+        name:'my',
+        component:()=>import('../views/my/my.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
     }
 ]
 //创建一个路由实例
