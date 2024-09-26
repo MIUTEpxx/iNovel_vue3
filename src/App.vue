@@ -5,7 +5,7 @@
 一旦数据被修改，Vue 就能够知道并作出相应的响应，比如更新 DOM，以确保视图与数据保持同步
 */
 import { ref } from 'vue';// ref是一个用于创建响应式数据的函数
-
+import Navbottom from './views/navbottom.vue';
 
 </script>
 
@@ -16,7 +16,8 @@ import { ref } from 'vue';// ref是一个用于创建响应式数据的函数
             <!-- 路由匹配到的组件将渲染在这里↓ -->
             <router-view></router-view>
             <!-- 底部导航栏 -->
-             <p class="TempTest">书城 社区 福利 我的</p>
+             <!-- <p class="TempTest">书城 社区 福利 我的</p> -->
+             <Navbottom /> 
         </div>
 </template>
 
