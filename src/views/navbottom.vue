@@ -2,10 +2,10 @@
 import { ref } from 'vue';
 
 let footerlist=ref([
-    {title:'书城',icon:'icon-ziliaoku'},
-    {title:'社区',icon:'icon-shequ-active'},
-    {title:'福利',icon:'icon-hongbao'},
-    {title:'我的',icon:'icon-wodedamaijihuo'},
+    {title:'书城',icon:'icon-ziliaoku',path:'/index'},
+    {title:'社区',icon:'icon-shequ-active',path:'/community'},
+    {title:'福利',icon:'icon-hongbao',path:'/welfare'},
+    {title:'我的',icon:'icon-wodedamaijihuo',path:'/my'},
 
 ])
 
@@ -20,22 +20,12 @@ let footerlist=ref([
             <div class="footer-seat">
                 <div class="footer-list">
                     <ul>
-                        <li>
-                            <!-- 引入图标 -->
-                            <i class="iconfont icon-ziliaoku"></i>
-                           <p>书城</p> 
-                        </li>
-                        <li>
-                            <i class="iconfont icon-shequ-active"></i>
-                           <p>社区</p> 
-                        </li>
-                        <li>
-                            <i class="iconfont icon-hongbao"></i>
-                           <p>福利</p> 
-                        </li>
-                        <li>
-                            <i class="iconfont icon-wodedamaijihuo"></i>
-                           <p>我的</p> 
+                        <li v-for="(v,i) in footerlist" :key="i">
+                            <!-- 与<a>类似,允许声明式地导航到不同的路由/页面 -->
+                            <router-link :to="v.path">
+                                <i class="iconfont" :class="v.icon"></i>
+                                <p>{{ v.title }}</p>
+                            </router-link>
                         </li>
                     </ul>
                 </div>

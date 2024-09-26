@@ -33,7 +33,10 @@ const routes=[
 //创建一个路由实例
 const router=createRouter({
     history:createWebHashHistory(),//创建一个 hash 模式的历史记录管理器
-    routes // routes:routes 键与值名一样 可简写为routes //包含了所有的路由定义的数组
+    routes, // routes:routes 键与值名一样 可简写为routes //包含了所有的路由定义的数组
+    // 当你访问某个路由，并且有对应的 <router-link> 时，应该给这个 <router-link> 添加一个名为 selected 的类
+    //例如navbottom.vue中的<router-link :to="v.path">,点击后表示当前选中,给该标签添加 selected
+    linkActiveClass:'selected'
 })
 
 export default router// 导出路由实例，以便在 Vue 应用中使用

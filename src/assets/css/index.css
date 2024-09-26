@@ -1,5 +1,10 @@
 /*底部导航栏*/
-
+/* :root 是一个伪类选择器，它匹配文档的根元素
+定义全局 CSS 变量,设置全局样式
+*/
+:root{
+    --bgcolor: #F6AC31;
+}
 .footer{
     height:60px;
 
@@ -29,4 +34,7 @@
 }
 .footer-list ul i{
     font-size: 20px;
+}
+.selected{
+    color:var(--bgcolor)
 }
