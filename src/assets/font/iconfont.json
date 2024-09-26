@@ -1,0 +1,254 @@
+{
+  "id": "4147554",
+  "name": "read",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "397422",
+      "name": "icon-weixin",
+      "font_class": "weixin",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "4936984",
+      "name": "QQ",
+      "font_class": "QQ",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "5978833",
+      "name": "more",
+      "font_class": "gengduo",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "18933259",
+      "name": "分享，转发",
+      "font_class": "fenxiangzhuanfa",
+      "unicode": "e74f",
+      "unicode_decimal": 59215
+    },
+    {
+      "icon_id": "29219760",
+      "name": "评论",
+      "font_class": "comment",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "1131",
+      "name": "资料库",
+      "font_class": "ziliaoku",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1115036",
+      "name": "福利",
+      "font_class": "fuli",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "1473261",
+      "name": "社区",
+      "font_class": "shequ-active",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "3170636",
+      "name": "我的大麦激活",
+      "font_class": "wodedamaijihuo",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "1111476",
+      "name": "互动社区",
+      "font_class": "hudongshequ",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "629357",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "908796",
+      "name": "圈圈门店-b",
+      "font_class": "quanquanmendianb",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
+      "icon_id": "1304879",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "1305401",
+      "name": "历史",
+      "font_class": "lishi",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "1418245",
+      "name": "右",
+      "font_class": "you",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "2076265",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "3456457",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "3555661",
+      "name": "现金红包",
+      "font_class": "xianjinhongbao",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "3731064",
+      "name": "我的好友",
+      "font_class": "wodehaoyou",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "5767876",
+      "name": "消息通知",
+      "font_class": "xiaoxitongzhi",
+      "unicode": "ec35",
+      "unicode_decimal": 60469
+    },
+    {
+      "icon_id": "8300844",
+      "name": "闭眼",
+      "font_class": "biyan",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "11372657",
+      "name": "电影票",
+      "font_class": "dianyingpiao",
+      "unicode": "e8ae",
+      "unicode_decimal": 59566
+    },
+    {
+      "icon_id": "12476895",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "15676319",
+      "name": "目录-路径",
+      "font_class": "mulu-lujing",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "19877121",
+      "name": "保录升学 - 4",
+      "font_class": "zhengpinbaozhang-duigou",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "24268380",
+      "name": "编辑-钢笔",
+      "font_class": "bianji-gangbi",
+      "unicode": "e6d8",
+      "unicode_decimal": 59096
+    },
+    {
+      "icon_id": "26212905",
+      "name": "货币-金币",
+      "font_class": "huobi-jinbi",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "26797143",
+      "name": "红包",
+      "font_class": "hongbao",
+      "unicode": "1008c",
+      "unicode_decimal": 65676
+    },
+    {
+      "icon_id": "34632124",
+      "name": "金币",
+      "font_class": "jinbi",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "1119126",
+      "name": "书籍",
+      "font_class": "shuji",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "2076312",
+      "name": " 我的",
+      "font_class": "wode",
+      "unicode": "e8a0",
+      "unicode_decimal": 59552
+    },
+    {
+      "icon_id": "3304126",
+      "name": "福利券",
+      "font_class": "fuliquan",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "7991696",
+      "name": "图书",
+      "font_class": "tushu",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "12097436",
+      "name": "福利中心",
+      "font_class": "fulizhongxin",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "16385555",
+      "name": "分类",
+      "font_class": "biaoqianA01_fenlei-57",
+      "unicode": "eaaf",
+      "unicode_decimal": 60079
+    }
+  ]
+}
