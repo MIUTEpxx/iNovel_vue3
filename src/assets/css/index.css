@@ -1,13 +1,14 @@
+
+  :root{
+    --bgcolor: #F8D447;
+}
 /*底部导航栏*/
 /* :root 是一个伪类选择器，它匹配文档的根元素
 定义全局 CSS 变量,设置全局样式
 */
-:root{
-    --bgcolor: #F6AC31;
-}
+
 .footer{
     height:60px;
-
 }
 .footer-seat{
     /* 将导航栏定位在视口的左下角 */
@@ -37,4 +38,39 @@
 }
 .selected{
     color:var(--bgcolor)
+}
+/*头部*/
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header-search{
+    background-color: var(--bgcolor);
+    padding: 10px;
+    
+}
+.search-list{
+     background-color: rgba(255, 251, 251, 0.5);
+     border-radius: 10px;
+     padding:5px;
+}
+.header-search input{
+    border: 0;
+    background-color: transparent;
+    margin-left: 10px;
+}
+.header-tabs{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bgcolor);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px;
+    color:rgba(0, 0, 0, 0.65);
+    /* 沾性定位 */
+    position:sticky;
+}
+.box{
+    height: 1000px;
 }
