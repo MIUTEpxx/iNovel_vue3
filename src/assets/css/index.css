@@ -83,5 +83,40 @@
     justify-content: space-between;
 }
 .charts h4{
-    font-weight: 1000;
+    font-size: 16px;
+}
+/* 热门分类 */
+.popuplist{
+    text-align: center;
+    padding: 1rem;/*10px*/
+}
+.popuplist h4{
+    padding: 1rem;
+}
+.popuplist ul{
+    /* 将元素定义为一个网格容器 子元素将会按照网格布局来排列*/
+    display: grid;
+    /* 创建两个等宽的列，每个列的宽度是可用空间的一个分数单位 1fr */
+    grid-template-columns: repeat(2,1fr);
+    /* 设置了网格行与行之间以及列与列之间的间隙 */
+    gap: 1rem;
+}
+.popuplist ul li{
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-size: 18px;
+}
+.popuplist .active{
+    background-color: var(--bgcolor);
+    color: #fff;
+    /* 字体描边 */
+    text-shadow: 0 0 1.5px #000000,
+    0 0 1.5px #000000,
+    0 0 1.5px #000000,
+    0 0 1.5px #000000,
+    0 0 1.5px #000000,
+    0 0 1.5px #000000,
+    0 0 1.5px #000000;
+
 }
