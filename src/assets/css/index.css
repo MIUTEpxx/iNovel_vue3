@@ -105,6 +105,8 @@
 .chartstab .van-tabs{
     overflow-x: auto;
     width: 100vw;
+    /* 边缘渐变样式 90deg:从左到右 渐变起始色 渐变终止色*/
+    -webkit-mask: linear-gradient(90deg,#000 80%,transparent);
 }
 .chartstab .van-tab{
     background-color: #F1F1F1;
