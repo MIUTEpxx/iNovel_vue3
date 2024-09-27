@@ -5,14 +5,14 @@
 //当前选中的标签
  const active = ref(0);
  const chartstab=ref([
-    {title:'全部',content:'内容1'},
-    {title:'都市',content:'内容2'},
-    {title:'历史',content:'内容3'},
-    {title:'科幻',content:'内容4'},
-    {title:'全部',content:'内容5'},
-    {title:'都市',content:'内容6'},
-    {title:'历史',content:'内容7'},
-    {title:'科幻',content:'内容8'},
+    {title:'全部',content:[{name:'内容a1'},{name:'内容b'},{name:'内容c'},{name:'内容a1'},{name:'内容b'},{name:'内容c'},{name:'内容a1'},{name:'内容b'},{name:'内容c'}]},
+    {title:'都市',content:[{name:'内容a2'},{name:'内容b'},{name:'内容c'}]},
+    {title:'历史',content:[{name:'内容a3'},{name:'内容b'},{name:'内容c'}]},
+    {title:'科幻',content:[{name:'内容a4'},{name:'内容b'},{name:'内容c'}]},
+    {title:'武侠',content:[{name:'内容a5'},{name:'内容b'},{name:'内容c'}]},
+    {title:'奇幻',content:[{name:'内容a6'},{name:'内容b'},{name:'内容c'}]},
+    {title:'穿越',content:[{name:'内容a7'},{name:'内容b'},{name:'内容c'}]},
+    {title:'悬疑',content:[{name:'内容a8'},{name:'内容b'},{name:'内容c'}]},
     
  ])
 </script>
@@ -21,13 +21,20 @@
         <div class="chartstab">
             <van-tabs v-model:active="active">
                 <van-tab  v-for="(v,i) in chartstab" :key="i" :title="v.title">
-                    {{ v.content }}
+                   <div class="chartstab-content">
+                        <div class="chartstab-item">
+                            <div class="chartstab-list" v-for="(item,i) in v.content" :key="i">
+                                {{ item.name }}
+                            </div>
+                        </div>
+                   </div>
                 </van-tab>
             </van-tabs>
         </div>
 </template>
 
 <style scoped>
+/* 以下仅为实例用 */
     .box{
         /* 横向滑动实现方法1 */
         /* 父元素设置横向滚区域 */
