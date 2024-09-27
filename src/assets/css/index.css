@@ -130,7 +130,7 @@
 /* 排行榜横向滑动内嵌页 */
 .chartstab-content{
     display: flex;
-    height: 300px;
+    height: 380px;
     overflow-x: auto;
 }
 .chartstab-content::-webkit-scrollbar{
@@ -142,6 +142,8 @@
     flex-direction: column;
     /* 允许换行 */
     flex-wrap: wrap;
+    /* 添加计数器,用于排行名称显示 */
+    counter-reset: count;
 }
 .chartstab-list{
     display: flex;
@@ -162,6 +164,8 @@
     object-fit: cover;
 }
 .chartstab-title{
+    /* 子绝父相 */
+    position:relative;
     flex: 1; /* 占据剩余空间 */
     margin-left: 20px;
     padding-right: 10px;
@@ -180,6 +184,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
+}
+/* ::before 伪元素可以用来创建装饰性内容，比如图标、
+引号或者其他装饰效果，而不需要修改HTML结构 */
+.chartstab-title::before{
+    counter-increment: count;
+    /* 显示计数器的数值 */
+    content: counter(count);
+    /* 子绝父相 父:.chartstab-title */
+    position:absolute;
+    top:9px;
+    left: -14px;
+}
+.chartstab-list:nth-child(-n+3) .chartstab-title::before{
+    color: orange;
 }
 /* ----------热门分类 ----------*/
 .popuplist{
