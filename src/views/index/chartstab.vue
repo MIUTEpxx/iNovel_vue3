@@ -4,33 +4,27 @@
 
 //当前选中的标签
  const active = ref(0);
-
+ const chartstab=ref([
+    {title:'全部',content:'内容1'},
+    {title:'都市',content:'内容2'},
+    {title:'历史',content:'内容3'},
+    {title:'科幻',content:'内容4'},
+    {title:'全部',content:'内容5'},
+    {title:'都市',content:'内容6'},
+    {title:'历史',content:'内容7'},
+    {title:'科幻',content:'内容8'},
+    
+ ])
 </script>
 
 <template>
         <div class="chartstab">
             <van-tabs v-model:active="active">
-                <van-tab title="标签 1">内容 1</van-tab>
-                <van-tab title="标签 2">内容 2</van-tab>
-                <van-tab title="标签 3">内容 3</van-tab>
-                <van-tab title="标签 4">内容 4</van-tab>
+                <van-tab  v-for="(v,i) in chartstab" :key="i" :title="v.title">
+                    {{ v.content }}
+                </van-tab>
             </van-tabs>
         </div>
-
-        <div class="box">
-            <div class="box-item">11</div>
-            <div class="box-item">22</div>
-            <div class="box-item">33</div>
-            <div class="box-item">44</div>
-            <div class="box-item">55</div>
-            <div class="box-item">66</div>
-            <div class="box-item">77</div>
-            <div class="box-item">88</div>
-            <div class="box-item">88</div>
-            <div class="box-item">88</div>
-            <div class="box-item">88</div>
-        </div>
-
 </template>
 
 <style scoped>

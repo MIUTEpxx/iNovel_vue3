@@ -100,6 +100,29 @@
 .charts h4{
     font-size: 16px;
 }
+/* 排行榜分类标签和横向滑动内嵌页 */
+.chartstab .van-tabs{
+    overflow-x: auto;
+    width: 100vw;
+}
+.chartstab .van-tab{
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    margin: 0 6px;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+.chartstab .van-tabs--line .van-tabs__wrap{
+    height: 30px;
+}
+.chartstab .van-tabs__line{
+    /* 取消选中标签时,出现的下划线 */
+    background: transparent;
+}
+.chartstab .van-tab--active{
+    background-color: var(--bgcolor);
+    color: var(--selectcolor);
+}
 /* 热门分类 */
 .popuplist{
     text-align: center;
