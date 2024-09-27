@@ -1,3 +1,4 @@
+<!-- 头部 -->
 <script setup>
 import { ref } from 'vue';
 </script>
@@ -6,11 +7,13 @@ import { ref } from 'vue';
  
         <div class="header">
             <div class="header-search">
+                <!-- 搜索栏 -->
                 <div class="search-list">
                     <i class="iconfont icon-sousuo"></i>
                     <input type="text" placeholder="请输入书名,作者">
                 </div>
             </div>
+            <!-- 头部导航栏 -->
             <div>
                 <van-sticky>
                     <ul class="header-tabs">
@@ -23,11 +26,12 @@ import { ref } from 'vue';
                 </ul>
                 </van-sticky>
             </div>
+            <!-- 广告位 -->
             <div>
                 <img src="@/assets/images/header.jpg" alt="">
             </div>
             <!-- <p class="TempTest">头部</p> -->
-             <div class="box"></div>
+             <!-- <div class="box"></div> -->
         </div>
 </template>
 
