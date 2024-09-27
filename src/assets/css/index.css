@@ -1,6 +1,8 @@
 
   :root{
-    --bgcolor: #F8D447;
+    --bgcolor: #B02633;
+    --unselectcolor:#ffffffa6;
+    --selectcolor:#fff;
 }
 /*底部导航栏*/
 /* :root 是一个伪类选择器，它匹配文档的根元素
@@ -18,6 +20,7 @@
     width: 100%;
     height: 60px;
     border-top: 1px solid rgba(128, 128, 128, 0.226);
+    
 }
 .footer-list{
     max-width: 1080px;
@@ -31,14 +34,27 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     height: 100%;
+    background-color: var(--bgcolor);
 }
 .footer-list ul i{
-    font-size: 20px;
+    font-size: 25px;
 }
-.selected{
-    color:var(--bgcolor)
+
+/* 未选择中设置颜色 */
+.footer-seat .footer-list .iconfont{
+    color:var(--unselectcolor);
 }
+.footer-seat .footer-list p{
+    color:var(--unselectcolor);
+}
+/* 选中时设置颜色 */
+.footer-seat .footer-list .selected .iconfont,
+.footer-seat .footer-list .selected p {
+    color:var(--selectcolor);
+}
+
 /*头部*/
 .header{
     /* position: absolute;
