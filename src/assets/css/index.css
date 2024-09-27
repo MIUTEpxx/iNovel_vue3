@@ -41,9 +41,12 @@
 }
 /*头部*/
 .header{
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
+    */
+    /* 使用视口宽度单位（vw），100vw 等于视口宽度的100%。 */
+    width: 100vw;
 }
 .header-search{
     background-color: var(--bgcolor);
@@ -73,4 +76,12 @@
 }
 .box{
     height: 1000px;
+}
+/* 排行榜 */
+.charts{
+    display: flex;
+    justify-content: space-between;
+}
+.charts h4{
+    font-weight: 1000;
 }
