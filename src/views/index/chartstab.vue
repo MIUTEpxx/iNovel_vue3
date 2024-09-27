@@ -5,7 +5,17 @@
 //当前选中的标签
  const active = ref(0);
  const chartstab=ref([
-    {title:'全部',content:[{name:'内容a1'},{name:'内容b'},{name:'内容c'},{name:'内容a1'},{name:'内容b'},{name:'内容c'},{name:'内容a1'},{name:'内容b'},{name:'内容c'}]},
+    {title:'全部',content:[{
+        name:'PxxDMX',img_url:"1.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容b',img_url:"2.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容c',img_url:"3.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容a1',img_url:"4.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容b',img_url:"5.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容c',img_url:"6.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容a1',img_url:"7.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容b',img_url:"8.png",info:"pxx",num:"连载中 256万字"},
+        {name:'内容c',img_url:"9.png",info:"pxx",num:"连载中 256万字"}]},
+
     {title:'都市',content:[{name:'内容a2'},{name:'内容b'},{name:'内容c'}]},
     {title:'历史',content:[{name:'内容a3'},{name:'内容b'},{name:'内容c'}]},
     {title:'科幻',content:[{name:'内容a4'},{name:'内容b'},{name:'内容c'}]},
@@ -24,7 +34,14 @@
                    <div class="chartstab-content">
                         <div class="chartstab-item">
                             <div class="chartstab-list" v-for="(item,i) in v.content" :key="i">
-                                {{ item.name }}
+                                <div class="chartstab-img">
+                                    <img :src="`/src/assets/images/${item.img_url}`" alt="">
+                                </div>
+                                <div class="chartstab-title">
+                                    <h3>{{ item.name }}</h3>
+                                    <p>{{item.info}}</p>
+                                    <p>{{ item.num }}</p>
+                                </div>
                             </div>
                         </div>
                    </div>

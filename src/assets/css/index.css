@@ -124,6 +124,8 @@
     background-color: var(--bgcolor);
     color: var(--selectcolor);
 }
+
+/* 排行榜横向滑动内嵌页 */
 .chartstab-content{
     display: flex;
     height: 300px;
@@ -132,7 +134,6 @@
 .chartstab-content::-webkit-scrollbar{
     display: none;
 }
-/* 排行榜横向滑动内嵌页 */
 .chartstab-item{
     display: flex;
     /* 垂直排列 */
@@ -140,15 +141,44 @@
     /* 允许换行 */
     flex-wrap: wrap;
 }
-
 .chartstab-list{
     display: flex;
     width: 200px;
-    height: 65px;
+    height: 80px;
     margin: 6px;
 }
-
-
+.chartstab-img{
+    /* width: 22%; */
+    /* 不放大，不缩小，基础宽度为22% */
+    flex: 0 0 30%; 
+}
+.chartstab-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /* 使图片等比例缩放 */
+    object-fit: cover;
+}
+.chartstab-title{
+    flex: 1; /* 占据剩余空间 */
+    margin-left: 20px;
+    padding-right: 10px;
+    display: flex;
+    /* 垂直排列 */
+    flex-direction: column;
+    /* 保留些间距来对齐 */
+    justify-content: space-evenly;
+    width: calc(100% - 66px);
+}
+.chartstab-title p{
+    color: #999;
+    font-size: 12px;
+    /* 溢出部分隐藏 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
 /* ----------热门分类 ----------*/
 .popuplist{
     text-align: center;
