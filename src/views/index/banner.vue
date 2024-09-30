@@ -20,6 +20,9 @@ import { ref } from 'vue';
                 <van-swipe-item>
                     <img src="@/assets/images/banner4.jpg" alt="">
                 </van-swipe-item>
+                <van-swipe-item>
+                    <img src="@/assets/images/banner5.jpg" alt="">
+                </van-swipe-item>
             </van-swipe>
         </div>
 </template>
