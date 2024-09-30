@@ -13,6 +13,9 @@ const show = ref(false);
         <van-popup
         v-model:show="show"
         round
+        closeable
+        close-icon="arrow-down"
+        close-icon-position="top-left"
         position="bottom"
         :style="{ height: '60%' }">
         1111
