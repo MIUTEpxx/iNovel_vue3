@@ -196,6 +196,7 @@
     top:9px;
     left: -14px;
 }
+/* n记录的是chartstab-listd的第n个孩子 nth-child(-n+3)表达式为正数时样式才有效 */
 .chartstab-list:nth-child(-n+3) .chartstab-title::before{
     color: orange;
 }
@@ -233,4 +234,8 @@
     0 0 1.5px #000000,
     0 0 1.5px #000000;
 
+}
+/* 首页轮播图 */
+.banner{
+    width: 100vw;
 }

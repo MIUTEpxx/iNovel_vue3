@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import Header from './header.vue';
 import Charts from './charts.vue';
 import Chartstab from './chartstab.vue';
+import Banner from './banner.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Chartstab from './chartstab.vue';
                 <Header></Header>
                 <Charts></Charts>
                 <Chartstab></Chartstab>
+                <Banner></Banner>
         </div>
 
 </template>
