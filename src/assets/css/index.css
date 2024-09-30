@@ -248,7 +248,7 @@
     0 0 1.5px #000000;
 
 }
-/* 首页轮播图 */
+/* ----------首页轮播图 ----------*/
 .banner{
     padding: 10px;
     width: 100vw;
@@ -341,4 +341,35 @@
     -webkit-line-clamp: 5;
     /* 设置弹性子元素的方向 子元素将垂直排列*/
     -webkit-box-orient: vertical;
+}
+/* ----------喜好设置 ----------*/
+.like-list{
+    padding:0 20px;
+    font-size: 16px;
+}
+.like-list h4{
+    font-weight: 900; 
+    text-align: center;
+    font-size: 20px;
+    padding:20px;
+
+}
+.like-list p{
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.like-list ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.like-list ul li{
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    height: 30px;
+    /* 是内容文字垂直居中 */
+    display: grid;
+    align-items: center;
 }
