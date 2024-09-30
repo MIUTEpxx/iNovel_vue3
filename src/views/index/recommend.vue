@@ -1,6 +1,7 @@
 <!-- 为你推荐 -->
 <script setup>
 import { ref } from 'vue';
+import Like from './like.vue';
 let recommendlist=ref([
     {title:'荡魔途',img_url:'1.png',autor:'4396y',desc:'杨凡无意间穿越到异世荒天大陆，这是一片属于修行者的世界，一切实力为尊，两世为人以身契魔，誓荡尽天下魔——多年后忆往昔峥嵘岁月，三十年太久只争朝夕。'},
     {title:'天幕 暗黑丛林',img_url:'2.png',autor:'楼笑羽',desc:'这个世界中，忽然降临了一个名为天幕的小世界！ 在这个天幕世界中，有这各种的机遇和危险！ 而主角千叶在天幕世界中，理解了人性的丑恶，化为魔神！ 开始，屠杀！'},
@@ -12,7 +13,7 @@ let recommendlist=ref([
         <div class="recommend">
             <div class="recommend-like">
                 <h3>为你推荐</h3>
-                <p>设置喜好 ></p>
+                <Like></Like>
             </div>
             <div class="recommend-list">
                 <ul>

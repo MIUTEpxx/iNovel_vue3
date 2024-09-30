@@ -333,6 +333,9 @@
     /* 将元素设置为块级弹性盒子模型 */
     display: -webkit-box;
     overflow: hidden;
+    /* 用于指定在长单词或URL内部进行换行的情况。
+    如果单词太长以至于无法适应容器的宽度，
+    而其他设置（如 word-break）又不允许在单词内部断行，那么 overflow-wrap: break-word; 会允许在单词内部进行换行。 */
     overflow-wrap: break-word;
     /* 限制块容器显示的文本行数  只显示4行*/
     -webkit-line-clamp: 5;
