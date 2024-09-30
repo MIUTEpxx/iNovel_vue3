@@ -26,9 +26,9 @@ import { ref } from 'vue';
                 </ul>
                 </van-sticky>
             </div>
-            <!-- 广告位 -->
-            <div>
-                <img src="@/assets/images/header.jpg" alt="">
+            <!-- 头部图片 -->
+            <div class="headerImgBox">
+                <img src="@/assets/images/header2.jpg" alt="">
             </div>
             <!-- <p class="TempTest">头部</p> -->
              <!-- <div class="box"></div> -->

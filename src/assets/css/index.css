@@ -90,7 +90,17 @@
     position:sticky;
     color: var(--unselectcolor);
 }
-
+.header .headerImgBox{
+    border-radius: 0 0 8px 8px;
+    height: 100px; 
+    overflow: hidden;
+}
+.header .headerImgBox img{
+    width: 100%;
+    height: 100%;
+    /* 使图片等比例缩放 */
+    object-fit: cover;
+}
 /* ----------排行榜 ----------*/
 .charts{
     display: flex;
@@ -153,7 +163,7 @@
 }
 .chartstab-img{
     /* width: 22%; */
-    /* 不放大，不缩小，基础宽度为22% */
+    /* 不放大，不缩小，基础宽度为30% */
     flex: 0 0 30%; 
 }
 .chartstab-img img{
@@ -237,5 +247,21 @@
 }
 /* 首页轮播图 */
 .banner{
+    padding: 10px;
     width: 100vw;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.my-swipe .van-swipe-item {
+    width: 100%; /* Set the width of the swipe item */
+    height: 120px; /* Set a fixed height for the swipe item */
+    overflow: hidden;
+    border-radius: 10px;
+}
+.banner img{
+
+    width: 100%;
+    height: 100%;
+    /* 使图片等比例缩放 */
+    object-fit: cover;
 }
