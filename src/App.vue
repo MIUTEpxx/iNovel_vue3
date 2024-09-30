@@ -11,7 +11,7 @@ import Navbottom from './views/navbottom.vue';
 
 <template>
 
-        <div>
+        <div class="appRoot">
             
             <!-- 路由匹配到的组件将渲染在这里↓ -->
             <router-view></router-view>

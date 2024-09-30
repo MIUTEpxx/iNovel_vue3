@@ -6,7 +6,9 @@
     --unselectcolor:#ffffffa6;
     --selectcolor:#fff;
 }
-
+.appRoot{
+    width: 100vw;
+}
 /*----------底部导航栏----------*/
 .footer{
     height:60px;
@@ -61,7 +63,7 @@
     left: 0;
     */
     /* 使用视口宽度单位（vw），100vw 等于视口宽度的100%。 */
-    width: 100vw;
+    /* width: 100vw; */
 }
 .header-search{
     background-color: var(--bgcolor);
@@ -126,6 +128,7 @@
     padding: 0 10px;
 }
 .chartstab .van-tabs--line .van-tabs__wrap{
+    
     height: 30px;
 }
 .chartstab .van-tabs__line{
@@ -268,11 +271,13 @@
 /* 为你推荐 */
 .recommend{
     padding: 10px;
+    /* width: 100vw;  */
 }
 .recommend .recommend-like{
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .recommend-like h3::before{
@@ -287,4 +292,50 @@
     position: absolute;
     bottom: 0;
     left: 0;
+}
+.recommend-list ul li{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.recommend-img{
+    width: 28%;
+}
+.recommend-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.recommend-title{
+    width: 68%;
+}
+.recommend-title h4{
+    font-size: 20px;
+    /* 文本不换行,超出部分隐藏,并用省略号表示超出 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+}
+.recommend-title p{
+    color: #808080;
+    font-size: 15px;
+}
+.recommend-title-author{
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.recommend-title-desc{
+    /* 将元素设置为块级弹性盒子模型 */
+    display: -webkit-box;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    /* 限制块容器显示的文本行数  只显示4行*/
+    -webkit-line-clamp: 5;
+    /* 设置弹性子元素的方向 子元素将垂直排列*/
+    -webkit-box-orient: vertical;
 }
