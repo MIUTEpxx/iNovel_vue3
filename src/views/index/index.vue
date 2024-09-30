@@ -5,6 +5,7 @@ import Header from './header.vue';
 import Charts from './charts.vue';
 import Chartstab from './chartstab.vue';
 import Banner from './banner.vue';
+import Recommend from './recommend.vue';
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Banner from './banner.vue';
                 <Charts></Charts>
                 <Chartstab></Chartstab>
                 <Banner></Banner>
+                <Recommend></Recommend>
         </div>
 
 </template>

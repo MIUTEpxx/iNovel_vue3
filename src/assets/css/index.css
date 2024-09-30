@@ -2,7 +2,7 @@
 定义全局 CSS 变量,设置全局样式
 */
   :root{
-    --bgcolor: #B02633;
+    --bgcolor: #cf2828;
     --unselectcolor:#ffffffa6;
     --selectcolor:#fff;
 }
@@ -264,4 +264,27 @@
     height: 100%;
     /* 使图片等比例缩放 */
     object-fit: cover;
+}
+/* 为你推荐 */
+.recommend{
+    padding: 10px;
+}
+.recommend .recommend-like{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.recommend-like h3::before{
+
+    content:'';
+    width: 66px;
+    height: 10px;
+    /* 渐变色 */
+    background: linear-gradient(transparent 30%,var(--bgcolor));
+        /* ::before默认为行内元素,宽高无效 */
+        /* 所以要通过设置绝对定位 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
