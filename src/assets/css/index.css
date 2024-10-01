@@ -445,7 +445,9 @@ html,body{
 .community-body-item{
     background-color: #fff;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 13px;
+    border-radius: 10px;
+    box-shadow: 3px 0 10px 3px #0000001a;
 }
 .community-item-hd{
     display: flex;
@@ -461,10 +463,47 @@ html,body{
 }
 .community-item-hd p{
     color: var(--AccentColor);
+    /* 处于父元素的display: flex;容器中,flex:1意味着将剩余空间给该子元素,会使后面的兄弟元素挤到一边 */
+    /* 此处是为了让下面的分享icon显示在最右边 */
     flex: 1;
-
 }
 .community-share i{
     color: #999;
     font-size: 22px;
+}
+/* 多行内容多出部分用省略号显示 */
+.community-item-title{
+    margin: 10px 0;
+    /* 将元素设置为块级弹性盒子模型 */
+    display: -webkit-box;
+    overflow: hidden;
+    /* 用于指定在长单词或URL内部进行换行的情况。
+    如果单词太长以至于无法适应容器的宽度，
+    而其他设置（如 word-break）又不允许在单词内部断行，那么 overflow-wrap: break-word; 会允许在单词内部进行换行。 */
+    overflow-wrap: break-word;
+    /* 限制块容器显示的文本行数  只显示4行*/
+    -webkit-line-clamp: 3;
+    /* 设置弹性子元素的方向 子元素将垂直排列*/
+    -webkit-box-orient: vertical;
+
+    font-size: 12px;
+    color: #474747;
+}
+.community-item-img{
+    display: flex;
+}
+.community-item-img img{
+    max-width: 50%;
+    max-height: 100px;
+    overflow: hidden;
+    margin: 0 5px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.community-item-review{
+    text-align: center;
+    margin-top: 15px;
+}
+.community-item-review span{
+    margin:0 20px;
 }
