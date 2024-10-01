@@ -21,6 +21,22 @@ let community=ref([
         img_url:['community3.jpg'],
         },
 ])
+// 分享面板
+const showShare = ref(false);
+    const options = [
+      [
+        { name: '微信', icon: 'wechat' },
+        { name: '朋友圈', icon: 'wechat-moments' },
+        { name: '微博', icon: 'weibo' },
+        { name: 'QQ', icon: 'qq' },
+      ],
+      [
+        { name: '复制链接', icon: 'link' },
+        { name: '分享海报', icon: 'poster' },
+        { name: '二维码', icon: 'qrcode' },
+        { name: '小程序码', icon: 'weapp-qrcode' },
+      ],
+    ];
 </script>
 
 <template>
@@ -34,26 +50,37 @@ let community=ref([
                 <div class="community-body">
                         <div class="community-body-item" v-for="(v,i) in community" :key="i">
                                 <div class="community-item-hd">
+                                        <!-- 头像 -->
                                         <img :src="`/src/assets/images/${v.hd_img}`" alt="头像">
+                                        <!-- 名称 -->
                                         <span>{{ v.name }}</span>
+                                        <!-- 圈子 -->
                                         <p>{{v.from}}</p>
+                                        <!-- 分享 -->
                                         <div class="community-share">
-                                                <i class="iconfont icon-gengduo"></i>
+                                                <van-cell class="iconfont icon-gengduo" @click=" showShare = true" />
                                         </div>
                                 </div>
+                                <!-- 内容 -->
                                 <div class="community-item-title">
                                         {{ v.title }}
                                 </div>
+                                <!-- 图片 -->
                                 <div class="community-item-img">
                                         <img  v-for="(v1,i1) in v.img_url" :key="i1" :src="`/src/assets/images/${v1}`" alt="">
                                 </div>
+                                <!-- 转发 评论 点赞 -->
                                 <div class="community-item-review">
                                         <span><i class="iconfont icon-fenxiangzhuanfa"></i>114</span>
                                         <span><i class="iconfont icon-comment"></i>541</span>
                                         <span><i class="iconfont icon-aixin"></i>666</span>
                                 </div>
                         </div>
-                        
+                        <van-share-sheet
+                        v-model:show="showShare"
+                        title="立即分享给好友"
+                        :options="options"      
+                        />                      
                 </div>
         </div>
 </template>

@@ -2,7 +2,9 @@
 定义全局 CSS 变量,设置全局样式
 */
   :root{
-    --bgcolor: #cf2828;
+    --bgcolor: #7ABFB2;
+    --bgcolorLight:#2ad3c58f;
+    --bgcolor2:#F0FDFC;
     --unselectcolor:#ffffffa6;
     --selectcolor:#fff;
     --AccentColor:#ff7300;
@@ -10,16 +12,19 @@
 }
 .appRoot{
     width: 100vw;
-    /* background-color: #f1f1f1; */
+    
 }
 html,body{
     max-width: 1080px;
     min-width: 320px;
     margin: auto;
+    background-color: #F0FDFC;
+
 }
 .container{
     max-width: 1080px;
     margin: auto;
+
 }
 /*----------底部导航栏----------*/
 .footer{
@@ -133,19 +138,23 @@ html,body{
     -webkit-mask: linear-gradient(90deg,#000 80%,transparent);
 }
 .chartstab .van-tab{
-    background-color: #F1F1F1;
+    background-color: #ffffff;
     border-radius: 10px;
     margin: 0 6px;
     white-space: nowrap;
     padding: 0 10px;
 }
 .chartstab .van-tabs--line .van-tabs__wrap{
-    
     height: 30px;
+    background: transparent;
+}
+.chartstab .van-tabs__nav--line {
+    background: transparent;
 }
 .chartstab .van-tabs__line{
     /* 取消选中标签时,出现的下划线 */
     background: transparent;
+
 }
 .chartstab .van-tab--active{
     background-color: var(--bgcolor);
@@ -226,6 +235,12 @@ html,body{
     color: orange;
 }
 /* ----------热门分类 ----------*/
+.popup .van-cell {
+    border-radius: 10px 0 0 10px;
+    margin: 5px 0;
+    background:var(--bgcolorLight);
+    color: var(--selectcolor);
+}
 .popuplist{
     text-align: center;
     padding: 1rem;/*10px*/
@@ -248,7 +263,7 @@ html,body{
     font-size: 18px;
 }
 .popuplist .active{
-    background-color: var(--bgcolor);
+    background-color: var(--bgcolorLight);
     color: #fff;
     /* 字体描边 */
     text-shadow: 0 0 1.5px #000000,
@@ -358,6 +373,11 @@ html,body{
     -webkit-box-orient: vertical;
 }
 /* ----------喜好设置 ----------*/
+.like .van-cell{
+    background: var(--bgcolorLight);
+    border-radius: 10px;
+    color: var(--selectcolor);
+}
 .like-list{
     padding:0 20px;
     font-size: 16px;
@@ -421,6 +441,7 @@ html,body{
 /* ----------社区 ----------*/
 .community-hd{
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: var(--bgcolor);
@@ -440,7 +461,7 @@ html,body{
     height: 1000px;
     margin-top: 50px;
     padding: 10px;
-    background-color: #f3f3f3;
+    background-color: var(--bgcolor2);
 }
 .community-body-item{
     background-color: #fff;
@@ -448,6 +469,7 @@ html,body{
     padding: 13px;
     border-radius: 10px;
     box-shadow: 3px 0 10px 3px #0000001a;
+    
 }
 .community-item-hd{
     display: flex;
@@ -467,9 +489,9 @@ html,body{
     /* 此处是为了让下面的分享icon显示在最右边 */
     flex: 1;
 }
-.community-share i{
+.community-share .van-cell{
     color: #999;
-    font-size: 22px;
+    font-size: 30px;
 }
 /* 多行内容多出部分用省略号显示 */
 .community-item-title{
