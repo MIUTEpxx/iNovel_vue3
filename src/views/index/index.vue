@@ -9,7 +9,11 @@ import Recommend from './recommend.vue';
 </script>
 
 <template>
- 
+        <!-- 开屏广告 -->
+         <div class="spread">
+                <span class="jump">点击跳转 <b>5</b> 秒</span>
+         </div>
+         <!-- 首页 -->
         <div class="container">
                 <Header></Header>
                 <Charts></Charts>
