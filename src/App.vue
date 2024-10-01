@@ -27,13 +27,13 @@ onMounted(()=>{
 <template>
 
         <div class="appRoot">
-              <!-- 开屏广告 -->
+                 <!-- 开屏广告 -->
                 <div class="spread" v-show="adBack" @click="adBack=false">
                         <span class="jump">点击跳过 <b>{{n}}</b> 秒</span>
                 </div>
 
             <!-- 路由匹配到的组件将渲染在这里↓ -->
-            <router-view v-show="!adBack"></router-view>
+            <router-view v-if="!adBack"></router-view>
             
             <!-- 底部导航栏 -->
              <!-- <p class="TempTest">书城 社区 福利 我的</p> -->
