@@ -22,7 +22,7 @@ let footerlist=ref([
                     <ul>
                         <li v-for="(v,i) in footerlist" :key="i">
                             <!-- 与<a>类似,允许声明式地导航到不同的路由/页面 -->
-                            <router-link :to="v.path">
+                            <router-link :to="v.path" class="v">
                                 <i class="iconfont" :class="v.icon"></i>
                                 <p>{{ v.title }}</p>
                             </router-link>

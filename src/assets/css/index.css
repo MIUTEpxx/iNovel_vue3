@@ -268,7 +268,7 @@
     /* 使图片等比例缩放 */
     object-fit: cover;
 }
-/* 为你推荐 */
+/* ----------为你推荐---------- */
 .recommend{
     padding: 10px;
     /* width: 100vw;  */
@@ -278,19 +278,22 @@
     justify-content: space-between;
     position: relative;
     margin-bottom: 10px;
+    align-items: center;
 }
-
+.recommend .recommend-like h3{
+    font-weight: 900;
+}
 .recommend-like h3::before{
 
     content:'';
-    width: 66px;
+    width: 67px;
     height: 10px;
     /* 渐变色 */
     background: linear-gradient(transparent 30%,var(--bgcolor));
         /* ::before默认为行内元素,宽高无效 */
         /* 所以要通过设置绝对定位 */
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
 }
 .recommend-list ul li{
@@ -368,8 +371,14 @@
 .like-list ul li{
     background-color: #f1f1f1;
     border-radius: 10px;
-    height: 30px;
+    height: 40px;
     /* 是内容文字垂直居中 */
     display: grid;
     align-items: center;
+}
+
+/* 选中标签的样式 */
+.like-list .addclass{
+    background-color: #ffe5d2;
+    color: #ff6528;   
 }
