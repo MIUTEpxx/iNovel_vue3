@@ -1,11 +1,30 @@
+<!-- 社区 -->
 <script setup>
 import { ref } from 'vue';
 </script>
 
 <template>
 
-        <div>
-                <p class="TempTest">社区</p>
+        <div class="community">
+                <div class="community-hd">
+                        <h3>推荐</h3>
+                </div>
+                <div class="community-body">
+                        <div class="community-body-item">
+                                <div class="community-item-hd">
+                                        头部
+                                </div>
+                                <div class="community-item-title">
+                                        这是标题
+                                </div>
+                                <div class="community-item-img">
+                                        图片
+                                </div>
+                                <div class="community-item-review">
+                                        点赞图标
+                                </div>
+                        </div>
+                </div>
         </div>
 </template>
 

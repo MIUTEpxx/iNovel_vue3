@@ -22,13 +22,17 @@ function autoPlay(){
 onMounted(()=>{
         autoPlay();
 })
+function jump(){
+        adBack.value=false;
+        clearInterval(timer);S
+}
 </script>
 
 <template>
 
         <div class="appRoot">
                  <!-- 开屏广告 -->
-                <div class="spread" v-show="adBack" @click="adBack=false">
+                <div class="spread" v-show="adBack" @click="jump">
                         <span class="jump">点击跳过 <b>{{n}}</b> 秒</span>
                 </div>
 
