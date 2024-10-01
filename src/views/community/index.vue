@@ -7,7 +7,9 @@ import { ref } from 'vue';
 
         <div class="community">
                 <div class="community-hd">
-                        <h3>推荐</h3>
+                        <div class="community-hd-item">
+                                <h3>推荐</h3>
+                        </div>
                 </div>
                 <div class="community-body">
                         <div class="community-body-item">
@@ -21,7 +23,35 @@ import { ref } from 'vue';
                                         图片
                                 </div>
                                 <div class="community-item-review">
-                                        点赞图标
+                                        点赞转发评论图标
+                                </div>
+                        </div>
+                        <div class="community-body-item">
+                                <div class="community-item-hd">
+                                        头部
+                                </div>
+                                <div class="community-item-title">
+                                        这是标题
+                                </div>
+                                <div class="community-item-img">
+                                        图片
+                                </div>
+                                <div class="community-item-review">
+                                        点赞转发评论图标
+                                </div>
+                        </div>
+                        <div class="community-body-item">
+                                <div class="community-item-hd">
+                                        头部
+                                </div>
+                                <div class="community-item-title">
+                                        这是标题
+                                </div>
+                                <div class="community-item-img">
+                                        图片
+                                </div>
+                                <div class="community-item-review">
+                                        点赞转发评论图标
                                 </div>
                         </div>
                 </div>
