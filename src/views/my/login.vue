@@ -1,20 +1,25 @@
 <!-- 登录界面 -->
 <script setup>
 import { ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+const router=useRouter();
 
+function goBack(){
+    router.push('/my')
+}
 </script>
 
 <template>
         <div class="login">
             <div class="login-list"> 
-                <div>X</div>
-                <h2>欢迎使用iNovel</h2>
+                <div @click="goBack"><van-icon name="arrow-left" /></div>
+                <h2>欢迎使用 <span>iNovel</span> !!!</h2>
                 <p>登录账户,发现好书</p>
                 <input type="text" placeholder="请输入账号">
                 <input type="text" placeholder="请输入密码">
-                <div>
+                <div class="agrement">
                     <input type="checkbox">
-                    <span>已阅读并同意《用户服务协议》及《隐私政策》</span>
+                    <span>已阅读并同意 <a href="https://blog.csdn.net/weixin_55553121/article/details/120492101">《用户服务协议》及《隐私政策》</a></span>
                 </div>
                 <button>登录</button>
                 <div class="login-title">
@@ -22,7 +27,20 @@ import { ref } from 'vue';
                     <span>忘记密码</span>
                 </div>
             </div>
-            <div class="login-way"></div>
+            <div class="login-way">
+                <p>其他登录方式</p>
+                <ul>
+                    <li>
+                        <i class="iconfont icon-weixin"></i>
+                        <p>微信</p>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-QQ"></i>
+                        <p>QQ</p>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 </template>
 

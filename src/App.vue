@@ -24,7 +24,8 @@ onMounted(()=>{
 })
 function jump(){
         adBack.value=false;
-        clearInterval(timer);S
+        clearInterval(timer);
+
 }
 </script>
 
