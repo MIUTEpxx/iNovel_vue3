@@ -534,4 +534,76 @@ html,body{
     background-color: var(--bgcolor);
     height: 160px;
     width: 100%;
+    border-radius: 0  0 5px 5px ;
+}
+.my-body{
+
+}
+.my-hd-login{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.my-hd-img {
+    margin-right: 20px;
+}
+.my-hd-img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.my-hd-item .username{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--selectcolor);
+}
+.my-hd-item button{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid var(--selectcolor);
+    background: none;
+    color: var(--selectcolor);
+
+}
+.my-body-item1{
+    background: linear-gradient(90deg,#22190E,#3D2E21,#22190E);
+    /* background: linear-gradient(90deg,#0e221c,#2f8f72,#0e221c); */
+    color: #e7d5ba;
+    border-radius: 10px;
+    padding: 10px;
+    margin: -50px 10px 10px 10px;
+}
+.my-body-item1 ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    /* padding: 5px 10px; */
+}
+.my-body-item1 ul i{
+    font-size: 20px;
+}
+.my-body-item1 ul p{
+    margin-top: 5px;
+}
+.my-body-item1 ul li{
+    position: relative;
+    /* 平均分配剩余空间 */
+    flex: 1;
+}
+.my-body-item1 ul li:nth-child(-n+2)::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: 1px solid #e7dbba36;
+}
+.my-body-item2,
+.my-body-item3,
+.my-body-item4{
+    margin-bottom: 10px;
+    background-color: var(--selectcolor);
 }
