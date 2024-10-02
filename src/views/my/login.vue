@@ -5,7 +5,8 @@ import { useRoute, useRouter } from 'vue-router';
 const router=useRouter();
 
 function goBack(){
-    router.push('/my')
+    // 返回上一个界面
+    window.history.go(-1);
 }
 </script>
 

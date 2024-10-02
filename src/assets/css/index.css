@@ -744,6 +744,17 @@ html,body{
     font-size: 12px;
 }
 /* ----------福利界面 ----------*/
+.welfare{
+    
+}
+.welfare-body{
+    padding: 10px 20px;
+    margin: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 2px 3px #00000011;
+    
+}
 .welfare-hd{
     display: grid;
     background: url(/src/assets/images/bg.jpg) no-repeat top center;
@@ -767,6 +778,53 @@ html,body{
     margin: 20px;
     background-color:#FCFDD0 ;
     color: var(--AccentColor);
+    font-size: 16px;
+    font-weight: 900;
+}
+.welfare-body-item1,
+.welfare-body-item2{
+    position: relative;
+    border-bottom: 1px solid #0000004d;
+    padding: 10px 0;
+}
+.welfare-body-item1 h2{
+    font-weight: 900;
+    margin: 5px 0 25px 0;
+    color: var(--AccentColor);
+}
+.welfare-text1{
+    font-weight: 900;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.welfare-text2{
+    color: #0000007e;
+    font-size: 12px;
+    margin: 10px 0;
+}
+.welfare .btn{
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 900;
+}
+.welfare-body-item1 button{
+    background-color: var(--AccentColor);
+    color: #FCFDD0;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+}
+.welfare-body-item2 .btn2{
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    position:absolute;
+    top: 25px;
+    right: 0;
+    background-color: var(--AccentColor);
+    color: #FCFDD0;
     font-size: 16px;
     font-weight: 900;
 }
