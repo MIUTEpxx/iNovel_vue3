@@ -743,3 +743,30 @@ html,body{
     margin-top: 5px;
     font-size: 12px;
 }
+/* ----------福利界面 ----------*/
+.welfare-hd{
+    display: grid;
+    background: url(/src/assets/images/bg.jpg) no-repeat top center;
+    background-size: cover;
+    height: 160px;
+    color: #FCFDD0;
+    justify-items: center;
+    align-content: center;
+}
+.welfare-hd h3{
+    font-weight: 900;
+    font-size: 20px;
+    padding: 40px 0 0 20px;
+}
+.welfare-hd button{
+    border: 0;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 20px;
+    background-color:#FCFDD0 ;
+    color: var(--AccentColor);
+    font-size: 16px;
+    font-weight: 900;
+}
