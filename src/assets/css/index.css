@@ -529,3 +529,9 @@ html,body{
 .community-item-review span{
     margin:0 20px;
 }
+/* ----------我的页面 ----------*/
+.my-hd{
+    background-color: var(--bgcolor);
+    height: 160px;
+    width: 100%;
+}
