@@ -4,7 +4,7 @@ import { ref } from 'vue';
 let footerlist=ref([
     {title:'书城',icon:'icon-ziliaoku',path:'/index'},
     {title:'社区',icon:'icon-shequ-active',path:'/community'},
-    {title:'福利',icon:'icon-hongbao',path:'/welfare'},
+    {title:'福利',icon:'icon-fuli',path:'/welfare'},
     {title:'我的',icon:'icon-wodedamaijihuo',path:'/my'},
 
 ])

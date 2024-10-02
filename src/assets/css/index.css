@@ -574,7 +574,7 @@ html,body{
     color: #e7d5ba;
     border-radius: 10px;
     padding: 10px;
-    margin: -50px 10px 10px 10px;
+    margin: -60px 10px 10px 10px;
 }
 .my-body-item1 ul{
     display: flex;
@@ -583,7 +583,7 @@ html,body{
     /* padding: 5px 10px; */
 }
 .my-body-item1 ul i{
-    font-size: 20px;
+    font-size: 30px;
 }
 .my-body-item1 ul p{
     margin-top: 5px;
@@ -604,6 +604,43 @@ html,body{
 .my-body-item2,
 .my-body-item3,
 .my-body-item4{
-    margin-bottom: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
     background-color: var(--selectcolor);
+    box-shadow: 0 0 6px 1px #00000023;
+}
+.my-body-item2{
+    /* margin: 10px 10px;
+    height: 80px; */
+}
+.my-body-item2 ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+.my-body-item3 ul{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+}
+.my-body-item2 ul i,
+.my-body-item3 ul i{
+    font-size: 25px;
+}
+.my-body-item4{
+    padding:5px 0;
+}
+.my-body-item4 ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    /* border-bottom: 1px solid #000; */
+}
+.my-body-item4 ul li p{
+    font-size: 16px;
+    font-weight: 500;
 }
