@@ -29,7 +29,9 @@ let myitem4=ref(['奖品中心','已购书籍','举报中心','爱心捐赠'])
               </div>
               <div class="my-hd-item">
                   <div class="username">游客</div>
-                  <button>点击登录</button>
+                   <router-link to="login">
+                      <button>点击登录</button>
+                  </router-link>
               </div>
           </div>
       </div>

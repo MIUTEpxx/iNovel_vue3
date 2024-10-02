@@ -28,6 +28,11 @@ const routes=[
         path:'/my',//我的
         name:'my',
         component:()=>import('../views/my/index.vue')
+    },
+    {
+        path:'/login',//登录页
+        name:'login',
+        component:()=>import('../views/my/login.vue')
     }
 ]
 //创建一个路由实例
