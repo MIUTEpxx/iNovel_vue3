@@ -4,19 +4,28 @@ import request from "../utils/request"
 export const getNovelTags = () => {
     return request.get('/novelTags');
   }
-  
+
 // 获取所有小说基本信息
 export const getNovelsInfo = () => {
     return request.get('/novelsInfo');
   }
 
-// 获取小说信息
-export const getNovelInfo = (novel_id) => {
-  return request.get('/novelInfo', {
+// 获取具有特定标签的小说信息
+export const getNovelsByTag = (novel_tab) => {
+  return request.get('/novelsByTag', {
+    params: {
+      novel_tab
+    }
+  });
+}
+
+// 根据小说ID获取小说信息
+export const getNovelById = (novel_id) => {
+  return request.get('/novelById', {
     params: {
       novel_id
     }
-  })
+  });
 }
 
 // 获取小说目录

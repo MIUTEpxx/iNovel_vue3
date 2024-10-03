@@ -6,7 +6,7 @@ import store from './store'
 import '@/assets/css/common.css'
 import '@/assets/font/iconfont.css'
 import '@/assets/css/index.css'
-
+import "@/mockjs/index";
 
 createApp(App)
 .use(router)
