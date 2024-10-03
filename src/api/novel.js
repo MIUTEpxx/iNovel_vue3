@@ -1,5 +1,6 @@
-import request from "../utils/request"
-
+// import request from "../utils/request"
+import axios from 'axios';
+const request=axios;
 // 获取所有小说类型标签
 export const getNovelTags = () => {
     return request.get('/novelTags');

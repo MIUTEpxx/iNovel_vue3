@@ -82,7 +82,7 @@ const novels = [
     title: '清晏',
     author: '碧波荡漾',
     tags: ['历史', '言情', '宫廷'],
-    img_url: '/src/assets/images/7.png',
+    img_url: '/src/assets/images/6.png',
     publishDate: '2021-09-20',
     summary: '在古代宫廷的深处，清晏公主的命运如同她的名字一般，清澈而宁静。然而，宫廷的权力斗争和爱情的纠葛，却让她的人生之路充满了波澜。',
     Likes:11000,
@@ -133,6 +133,8 @@ Mock.mock('/novelTags', 'get', () => {
       'data': tags // 返回 tags 数组作为数据
     };
   });
+
+
 
 // 模拟获取所有小说基本信息的接口
 Mock.mock('/novelsInfo', 'get', () => {
