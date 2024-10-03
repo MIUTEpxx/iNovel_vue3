@@ -1,5 +1,6 @@
 //导入 Vue Router 库中的两个函数，用于创建和管理单页应用的路由
 import { createRouter,createWebHashHistory } from "vue-router";
+import store from '@/store'; // 引入 Vuex store
 
 const routes=[
     {
@@ -48,5 +49,15 @@ const router=createRouter({
     //例如navbottom.vue中的<router-link :to="v.path">,点击后表示当前选中,给该标签添加 selected
     linkActiveClass:'selected'
 })
+
+// 设置了 beforeEach 路由守卫来处理底部导航栏的显示和隐藏
+router.beforeEach((to, from, next) => {
+    if (to.path === '/login') {
+      store.commit('setTabBarShow', false);
+    } else {
+      store.commit('setTabBarShow', true);
+    }
+    next();
+  });
 
 export default router// 导出路由实例，以便在 Vue 应用中使用

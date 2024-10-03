@@ -4,8 +4,14 @@
 在 Vue 中，当你创建一个响应式数据时，Vue 会自动监听这些数据的变化，
 一旦数据被修改，Vue 就能够知道并作出相应的响应，比如更新 DOM，以确保视图与数据保持同步
 */
-import { ref ,onMounted} from 'vue';// ref是一个用于创建响应式数据的函数
+import { ref ,onMounted,computed} from 'vue';// ref是一个用于创建响应式数据的函数
+import { useStore } from 'vuex';
 import Navbottom from './views/navbottom.vue';
+
+const store = useStore();
+// 使用计算属性来获取 Vuex 中的 tabBarShow 状态
+const tabBarShow = computed(() => store.state.tabBarShow);
+
 let adBack=ref('true')//开屏广告的显示和隐藏
 let n =ref(5)//默认时间 秒
 let timer=null;
@@ -23,9 +29,9 @@ onMounted(()=>{
         autoPlay();
 })
 function jump(){
+        store.commit('setTabBarShow', true);
         adBack.value=false;
         clearInterval(timer);
-
 }
 </script>
 
@@ -42,7 +48,7 @@ function jump(){
             
             <!-- 底部导航栏 -->
              <!-- <p class="TempTest">书城 社区 福利 我的</p> -->
-             <Navbottom v-show="!adBack"/> 
+             <Navbottom v-show="tabBarShow"/> 
         </div>
 </template>
 

@@ -2,12 +2,18 @@
 <script setup>
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useStore } from 'vuex'; // 引入 useStore 用于操作 Vuex
+
 const router=useRouter();
+const store = useStore(); // 获取 Vuex store 实例
 
 function goBack(){
+    // 在返回之前重新显示底部导航栏
+    store.commit('setTabBarShow', true);
     // 返回上一个界面
     window.history.go(-1);
 }
+
 </script>
 
 <template>
