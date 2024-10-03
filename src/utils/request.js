@@ -1,7 +1,9 @@
 // 引入 Axios
 import axios from 'axios';
-import { Snackbar } from "@varlet/ui";
+// import { Snackbar } from "@varlet/ui";
 
+// 从浏览器的本地存储中检索名为 'token' 的值。这个值通常是一个字符串，代表用户的认证令牌
+// 由于 localStorage 是持久化的存储，即使浏览器关闭后，存储的数据仍然存在，因此，通过这种方式保存的令牌可以在用户再次打开浏览器时保持用户的登录状态
 const token = localStorage.getItem('token')
 
 // 创建一个 Axios 实例
@@ -31,7 +33,7 @@ request.interceptors.response.use(
     return response.data;
   },
   (error) => {
-    Snackbar.error('api错误')
+    // Snackbar.error('api错误')
     // 对响应错误做点什么
     return Promise.reject(error);
   }

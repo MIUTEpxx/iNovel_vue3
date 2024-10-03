@@ -1,4 +1,14 @@
-import request from "@/utils/request"
+import request from "../utils/request"
+
+// 获取所有小说类型标签
+export const getNovelTags = () => {
+    return request.get('/novelTags');
+  }
+  
+// 获取所有小说基本信息
+export const getNovelsInfo = () => {
+    return request.get('/novelsInfo');
+  }
 
 // 获取小说信息
 export const getNovelInfo = (novel_id) => {

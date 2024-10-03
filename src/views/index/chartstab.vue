@@ -1,9 +1,19 @@
 <!-- 排行榜分类标签和横向滑动内嵌页 -->
 <script setup>
- import { ref } from 'vue';
-
+ import { ref,onMounted } from 'vue';
+// import { getCategoriesWithNovels } from '@/api/novel'; // 导入 API 函数
 //当前选中的标签
  const active = ref(0);
+//  const chartstab = ref([]); // 初始化为空数组
+//  onMounted(async () => {
+//     try {
+//       const response = await getCategoriesWithNovels(); // 调用 API 获取数据
+//       chartstab.value = response.data; // 假设响应的数据结构是 { data: [...] }
+//     } catch (error) {
+//       console.error('Failed to fetch categories with novels:', error);
+//       // 处理错误情况，例如显示错误消息
+//     }
+//   });
  const chartstab=ref([
     {title:'全部',content:[{
         name:'PxxDMX',img_url:"1.png",info:"pxx",num:"连载中 256万字"},
