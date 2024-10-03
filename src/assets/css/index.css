@@ -7,7 +7,7 @@
     --bgcolor2:#F0FDFC;
     --unselectcolor:#ffffffa6;
     --selectcolor:#fff;
-    --AccentColor:#ff7300;
+    --AccentColor:#ff6600;
 
 }
 .appRoot{
@@ -748,7 +748,7 @@ html,body{
     
 }
 .welfare-body{
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 15px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -782,9 +782,10 @@ html,body{
     font-weight: 900;
 }
 .welfare-body-item1,
-.welfare-body-item2{
+.welfare-body-item2,
+.welfare-body-item3{
     position: relative;
-    border-bottom: 1px solid #0000004d;
+    border-bottom: 1px solid #00000021;
     padding: 10px 0;
 }
 .welfare-body-item1 h2{
@@ -816,15 +817,47 @@ html,body{
     right: 0;
     bottom: 30px;
 }
-.welfare-body-item2 .btn2{
+.btn2{
     border: 0;
     border-radius: 20px;
     padding: 5px 10px;
+    background-color: #ffe4a9;
+    color: var(--AccentColor);
+    font-size: 16px;
+    font-weight: 900;
+}
+.welfare-body-item2 .btn2{
     position:absolute;
     top: 25px;
     right: 0;
-    background-color: var(--AccentColor);
-    color: #FCFDD0;
-    font-size: 16px;
-    font-weight: 900;
+}
+/*阅读时间奖励进度条*/
+.welfare-icon{
+    height: 40px;   
+}
+.welfare-item3-list img,
+.welfare-icon img{
+    width: 20px;
+    height: 20px;
+}
+.welfare-body-item2 .van-step--horizontal .van-step__title{
+    margin-left: -2px;
+}
+
+.welfare-item3-list{
+    display: flex;
+    align-items: center;
+}
+.welfare-item3-list .btn2{
+    position:absolute;
+    top: 15px;
+    right: 0;
+}
+.welfare-item3-list img{
+    margin: 0 5px;
+}
+.welfare-item3-list span{
+    font-weight: 600;
+    color: var(--AccentColor);
+    font-size: 12px;
 }
