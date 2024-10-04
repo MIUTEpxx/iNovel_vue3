@@ -21,3 +21,5 @@ npm run dev
 ## 页面效果展示
 
 ![](public/GIF 2024-10-4 22-22-06.gif)
+
+![](https://github.com/MIUTEpxx/iNovel_vue3/blob/main/public/GIF%202024-10-4%2022-22-06.gif)
