@@ -179,7 +179,7 @@ Mock.mock(/\/novelsByTag(.*)/, 'get', (options) => {
     // console.log(options.url);
     const tag = parseInt(options.url.split('?')[1].split('=')[1], 10); // 从URL中提取标签参数并转换为整数
     // const tag1 = tag ? decodeURIComponent(tag) : null;//将乱码转为中文
-    console.log(typeof(tag));
+    // console.log(typeof(tag));
     const filteredNovels = novels.filter(novel => 
       novel.tags.some(tagObj => tagObj.id === tag)
     );

@@ -36,7 +36,7 @@ watch(active, async (newActive) => {
         // 当 active 变化时，获取新的小说列表
         let response = await getNovelsByTag(novelTabs.value[newActive].id);
         novels.value = response.data.data; // 更新 novels
-        // console.log(response);
+         console.log(response);
     } catch (error) {
         console.error('Failed to fetch novels by tag:', error);
     }
