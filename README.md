@@ -16,3 +16,8 @@ npm install
 npm run dev
 ```
 
+
+
+## 页面效果展示
+
+![](public/GIF 2024-10-4 22-22-06.gif)
