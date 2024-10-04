@@ -924,8 +924,9 @@ html,body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.novel-Comment,
 .novel-bottom,
-.novel-tabs,
+.novel-tags,
 .novel-info{
     margin: 10px;
     padding: 10px;
@@ -957,16 +958,17 @@ html,body{
     font-weight: 600;
     color: #00000093;
 }
-.novel-tabs h3,
+.novel-tags h3,
 .novel-summary h3{
     margin-bottom: 10px;
 }
 
-.novel-tabs ul{
+.novel-tags ul{
     display: flex;
     justify-content: flex-start;
 }
-.novel-tabs ul li{
+.novel-tags ul li{
+    margin: 2px 5px;
     padding: 2px 5px;
     border: 2px solid var(--bgcolor);
     border-radius: 20%;
