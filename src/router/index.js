@@ -36,10 +36,14 @@ const routes=[
         component:()=>import('../views/my/login.vue')
     },
     {
-        path:'/login',//登录页
-        name:'login',
-        component:()=>import('../views/my/login.vue')
-    }
+        path: '/novel/:id',
+        name: 'novel',
+        meta: {
+          title: '小说详情页'
+        },
+        component: () => import("../views/novel/index.vue"),
+
+      },
 ]
 //创建一个路由实例
 const router=createRouter({

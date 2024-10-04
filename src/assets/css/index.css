@@ -164,7 +164,7 @@ html,body{
 /* 排行榜横向滑动内嵌页 */
 .chartstab-content{
     display: flex;
-    height: 380px;
+    height: 400px;
     overflow-x: auto;
 }
 .chartstab-content::-webkit-scrollbar{
@@ -183,8 +183,9 @@ html,body{
     display: flex;
     width: 200px;
     height: 80px;
-    margin: 6px;
+    margin: 10px;
 }
+
 .chartstab-img{
     /* width: 22%; */
     /* 不放大，不缩小，基础宽度为30% */
