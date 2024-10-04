@@ -975,13 +975,36 @@ html,body{
     font-weight: 700;
 }
 .novel-bottom{
-   display: flex;
-   justify-content: space-around;
+    display: flex;       /* 启用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;
 }
-.novel-bottom button{
-    width: 80%;
+.novel-bottom .router-link{
+    width: 100%;
+}
+.novel-bottom  button{
     background: var(--bgcolor);
     color: var(--selectcolor);
     font-size: 16px;
     font-weight: 700;
 }
+
+/* ----------小说阅读器 ----------*/
+.app-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .reader-content {
+    padding: 20px;
+    text-align: justify;
+    height: calc(100vh - 46px); /* 减去导航栏高度 */
+    overflow-y: auto;
+  }
+  
+  .directory-content {
+    padding: 20px;
+  }
+  .reader-content h1{
+    margin-bottom: 10px;
+  }

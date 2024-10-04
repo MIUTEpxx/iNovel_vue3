@@ -13,26 +13,41 @@ const routes=[
         //首页
         path:'/index',//路径
         name:'index',//名字
+        meta: {
+          title: '书城首页'
+        },
         component:()=>import('../views/index/index.vue')//动态导入的组件,当用户访问应用的根路径 / 时,会动态添加其中的组件并渲染
     },
     {
         path:'/community',//社区
         name:'community',
+        meta: {
+          title: '社区中心'
+        },
         component:()=>import('../views/community/index.vue')
     },
     {
         path:'/welfare',//福利
         name:'welfare',
+        meta: {
+          title: '福利中心'
+        },
         component:()=>import('../views/welfare/index.vue')
     },
     {
         path:'/my',//我的
         name:'my',
+        meta: {
+          title: '个人中心'
+        },
         component:()=>import('../views/my/index.vue')
     },
     {
         path:'/login',//登录页
         name:'login',
+        meta: {
+          title: '登录界面'
+        },
         component:()=>import('../views/my/login.vue')
     },
     {
@@ -43,6 +58,14 @@ const routes=[
         },
         component: () => import("../views/novel/index.vue"),
 
+      },
+      {
+        path: '/reader/:id',
+        meta: {
+          title: '小说阅读器'
+        },
+        name: 'reader',
+        component: () => import("../views/novel/reader.vue"),
       },
 ]
 //创建一个路由实例
@@ -58,8 +81,8 @@ const router=createRouter({
 router.beforeEach((to, from, next) => {
    // 创建一个正则表达式对象来匹配以 '/novel' 开头的路径
    const novelRegex = /\/novel(.*)/;
-
-    if (to.path === '/login'||novelRegex.test(to.path)) {
+   const novelRegex2 = /\/read(.*)/;
+    if (to.path === '/login'||novelRegex.test(to.path)||novelRegex2.test(to.path)) {
       store.commit('setTabBarShow', false);
     } else {
       store.commit('setTabBarShow', true);

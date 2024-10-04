@@ -32,8 +32,8 @@ function goBack(){
 <template>
         <div class="novel">
             <van-sticky>
-                <div class="backbtn" @click="goBack">
-                    <van-icon name="arrow-left" />
+                <div class="backbtn" >
+                    <van-icon @click="goBack" name="arrow-left" />
                 </div>
             </van-sticky>
 
@@ -82,7 +82,12 @@ function goBack(){
                 </ul>
             </div>
             <div class="novel-bottom">
-                <button>立即阅读</button>
+                <router-link :to="{
+                                name: 'reader',
+                                params: { id: novelId },
+                            }">
+                     <button>立即阅读</button>
+                </router-link>
             </div>
             <div class="novel-Comment">
                 <h3>评论区</h3>
