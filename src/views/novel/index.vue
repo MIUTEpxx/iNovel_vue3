@@ -77,7 +77,7 @@ function goBack(){
                 <h3>作品标签</h3>
                 <ul>
                     <li v-for="(v,i) in novelinfo.tags" :key="i">
-                        {{ v }}
+                        {{ v.name }}
                     </li>
                 </ul>
             </div>
