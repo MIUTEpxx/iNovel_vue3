@@ -12,9 +12,9 @@ onMounted(async () => {
     try {
         // 获取所有标签
         let response = await getNovelTags();
-        response.data.data.unshift('全部' ); // 添加一个默认的标签
+        response.data.data.unshift({name:'全部'} ); // 添加一个默认的标签
         novelTabs.value = response.data.data; // 响应的数据结构是 { status, message, data }
-        
+        console.log(response);
         response=await getNovelsInfo(); // 获取全部小说的信息
         novels.value=response.data.data;
 
@@ -34,9 +34,9 @@ watch(active, async (newActive) => {
             return;
         }
         // 当 active 变化时，获取新的小说列表
-        let response = await getNovelsByTag(novelTabs.value[newActive]);
+        let response = await getNovelsByTag(novelTabs.value[newActive].id);
         novels.value = response.data.data; // 更新 novels
-        console.log(response);
+        // console.log(response);
     } catch (error) {
         console.error('Failed to fetch novels by tag:', error);
     }
@@ -46,7 +46,7 @@ watch(active, async (newActive) => {
 <template>
         <div class="chartstab">
             <van-tabs v-model:active="active">
-                <van-tab  v-for="(v,i) in novelTabs" :key="i" :title="v">
+                <van-tab  v-for="(v,i) in novelTabs" :key="i" :title="v.name">
                    <div class="chartstab-content">
                         <div class="chartstab-item">
                             <router-link :to="{
