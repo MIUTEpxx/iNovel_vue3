@@ -8,9 +8,11 @@
 
 在项目文件夹中执行以下命令:
 
-> #安装依赖
-> npm install
->
-> #开发模式
-> npm run dev
+```
+#安装依赖
+npm install
+
+#开发模式
+npm run dev
+```
 
