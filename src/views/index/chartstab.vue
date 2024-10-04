@@ -1,6 +1,9 @@
 <!-- 排行榜分类标签和横向滑动内嵌页 -->
 <script setup>
- import { ref,onMounted } from 'vue';
+// 导入 bigNumberTransform 函数
+import { bigNumberTransform } from '@/utils/countManage.js';
+
+ import { ref,onMounted ,watch  } from 'vue';
  import { getNovelTags, getNovelsByTag, getNovelsInfo} from '@/api/novel'; // 获取标签和小说信息的API
  let novelTabs = ref([]);
  let novels=ref([]);
@@ -11,10 +14,9 @@ onMounted(async () => {
         let response = await getNovelTags();
         response.data.data.unshift('全部' ); // 添加一个默认的标签
         novelTabs.value = response.data.data; // 响应的数据结构是 { status, message, data }
-
+        
         response=await getNovelsInfo(); // 获取全部小说的信息
         novels.value=response.data.data;
-        console.log(novels);
 
     } catch (error) {
         console.error('Failed to fetch novel tags:', error);
@@ -22,6 +24,23 @@ onMounted(async () => {
 
 });
 
+// 监听 active 的变化来获取特定标签的小说信息
+watch(active, async (newActive) => {
+    try {
+        console.log(newActive);
+        if(newActive===0){
+            let response=await getNovelsInfo(); // 获取全部小说的信息
+            novels.value=response.data.data;
+            return;
+        }
+        // 当 active 变化时，获取新的小说列表
+        let response = await getNovelsByTag(novelTabs.value[newActive]);
+        novels.value = response.data.data; // 更新 novels
+        console.log(response);
+    } catch (error) {
+        console.error('Failed to fetch novels by tag:', error);
+    }
+});
 </script>
 
 <template>
@@ -30,8 +49,11 @@ onMounted(async () => {
                 <van-tab  v-for="(v,i) in novelTabs" :key="i" :title="v">
                    <div class="chartstab-content">
                         <div class="chartstab-item">
-                            <div class="chartstab-list" v-for="(item,i) in novels" :key="i">
-                                <div class="chartstab-img">
+                            <router-link :to="{
+                                name: 'novel',
+                                params: { id: item.id },
+                            }" class="chartstab-list" v-for="(item, i) in novels" :key="i">
+                           <div class="chartstab-img">
                                     <img :src="`${item.img_url}`" alt="">
                                 </div>
                                 <div class="chartstab-title">
@@ -39,7 +61,7 @@ onMounted(async () => {
                                     <p>作者:{{item.author}}</p>
                                     <p><van-icon name="good-job-o" />{{ item.Likes }}</p>
                                 </div>
-                            </div>
+                            </router-link>
                         </div>
                    </div>
                 </van-tab>

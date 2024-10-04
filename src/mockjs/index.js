@@ -120,9 +120,9 @@ const novels = [
 // ]
 
 // 设置 Mock.js 的响应延时
-Mock.setup({
-    timeout: '200-600'
-  });
+// Mock.setup({
+//     timeout: '200-600'
+//   });
 
 // 使用 Mock.mock 来模拟获取所有小说标签的接口
 Mock.mock('/novelTags', 'get', () => {
@@ -138,6 +138,7 @@ Mock.mock('/novelTags', 'get', () => {
 
 // 模拟获取所有小说基本信息的接口
 Mock.mock('/novelsInfo', 'get', () => {
+    console.log("2333333");
     return ({
       'status': 'success',
       'message': '获取小说信息成功',
@@ -146,13 +147,18 @@ Mock.mock('/novelsInfo', 'get', () => {
 });
 
 // 模拟的根据标签获取小说信息的API
-Mock.mock('/novelsByTag', 'get', (options) => {
+Mock.mock(/\/novelsByTag(.*)/, 'get', (options) => {
+    // console.log(options);
+    // console.log(options.url);
     const tag = options.url.split('?')[1].split('=')[1]; // 从URL中提取标签参数
-    const filteredNovels = novels.filter(novel => novel.tags.includes(tag));
+    const tag1 = tag ? decodeURIComponent(tag) : null;//将乱码转为中文
+    // console.log(tag1);
+    const filteredNovels = novels.filter(novel => novel.tags.includes(tag1));
+
     return {
       status: 'success',
       message: '获取小说信息成功',
-      data: filteredNovels
+      data: filteredNovels // 如果没有找到，则返回空对象
     };
   });
   
