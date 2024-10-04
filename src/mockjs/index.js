@@ -138,7 +138,7 @@ Mock.mock('/novelTags', 'get', () => {
 
 // 模拟获取所有小说基本信息的接口
 Mock.mock('/novelsInfo', 'get', () => {
-    console.log("2333333");
+    // console.log("2333333");
     return ({
       'status': 'success',
       'message': '获取小说信息成功',
@@ -163,7 +163,8 @@ Mock.mock(/\/novelsByTag(.*)/, 'get', (options) => {
   });
   
   // 模拟的根据ID获取小说信息的API
-  Mock.mock('/novelById', 'get', (options) => {
+  Mock.mock(/\/novelById(.*)/, 'get', (options) => {
+    console.log(options);
     const id = parseInt(options.url.split('?')[1].split('=')[1]); // 从URL中提取ID参数
     const novel = novels.find(novel => novel.id === id);
     return {

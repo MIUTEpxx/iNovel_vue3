@@ -17,7 +17,7 @@ let n =ref(5)//默认时间 秒
 let timer=null;
 function play(){
         n.value--;
-        console.log(n.value);
+        // console.log(n.value);
         if(n.value<=0){
                 adBack.value=false;
         }
@@ -29,7 +29,7 @@ onMounted(()=>{
         autoPlay();
 })
 function jump(){
-        store.commit('setTabBarShow', true);
+        // store.commit('setTabBarShow', true);
         adBack.value=false;
         clearInterval(timer);
 }

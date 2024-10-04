@@ -56,7 +56,10 @@ const router=createRouter({
 
 // 设置了 beforeEach 路由守卫来处理底部导航栏的显示和隐藏
 router.beforeEach((to, from, next) => {
-    if (to.path === '/login') {
+   // 创建一个正则表达式对象来匹配以 '/novel' 开头的路径
+   const novelRegex = /\/novel(.*)/;
+
+    if (to.path === '/login'||novelRegex.test(to.path)) {
       store.commit('setTabBarShow', false);
     } else {
       store.commit('setTabBarShow', true);

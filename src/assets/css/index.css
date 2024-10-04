@@ -862,3 +862,124 @@ html,body{
     color: var(--AccentColor);
     font-size: 12px;
 }
+/* ----------小说详情页 ----------*/
+.novel .backbtn{
+    height: 40px;
+    width: 100%;
+    position:sticky;
+    background: var(--bgcolor2);
+}
+.novel  .van-icon{
+    font-size: 20px;
+    padding: 10px;
+}
+/* 头部 */
+.novel-hd{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--bgcolor);
+    box-shadow: 1px 1px 10px 1px #00000023;
+}
+.novel-hd-img{
+    width: 30%;
+   
+}
+.novel-hd-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:  cover;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+.novel-hd-info{
+    width: 70%;
+    margin: 15px 0 0 15px;
+    color: var(--selectcolor);
+}
+.novel-hd-info h3{
+    font-size: 18px;
+    font-weight: 900;
+    /* 将元素设置为块级弹性盒子模型 */
+    display: -webkit-box;
+    overflow: hidden;
+    /* 用于指定在长单词或URL内部进行换行的情况。
+    如果单词太长以至于无法适应容器的宽度，
+    而其他设置（如 word-break）又不允许在单词内部断行，那么 overflow-wrap: break-word; 会允许在单词内部进行换行。 */
+    overflow-wrap: break-word;
+    /* 限制块容器显示的文本行数  只显示3行*/
+    -webkit-line-clamp: 3;
+    /* 设置弹性子元素的方向 子元素将垂直排列*/
+    -webkit-box-orient: vertical;
+}
+.novel-hd-info p{
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--unselectcolor);
+
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.novel-bottom,
+.novel-tabs,
+.novel-info{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--selectcolor);
+    box-shadow: 1px 1px 10px 1px #00000023;
+}
+.novel-info-likes{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 0 15px ;
+    padding: 5px;
+    background-color: #eeeaea;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.novel-info-likes .van-icon{
+    font-size: 30px;
+    color: var(--AccentColor)
+}
+.novel-info-likes .num{
+    font-size: 15px;
+    font-weight: 700;
+}
+.novel-info-likes .name{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00000093;
+}
+.novel-tabs h3,
+.novel-summary h3{
+    margin-bottom: 10px;
+}
+
+.novel-tabs ul{
+    display: flex;
+    justify-content: flex-start;
+}
+.novel-tabs ul li{
+    padding: 2px 5px;
+    border: 2px solid var(--bgcolor);
+    border-radius: 20%;
+    font-weight: 700;
+}
+.novel-bottom{
+   display: flex;
+   justify-content: space-around;
+}
+.novel-bottom button{
+    width: 80%;
+    background: var(--bgcolor);
+    color: var(--selectcolor);
+    font-size: 16px;
+    font-weight: 700;
+}
