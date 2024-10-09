@@ -19,29 +19,24 @@ onMounted(async () => {
     }
 });
 
-// 监听 likelist 的变化
 watch(likelist, async (newVal, oldVal) => {
     // 当 likelist 发生变化时，这里的代码会被执行
-    // console.log('likelist changed:', newVal);
+
+    // 监听小说喜好标签
     recommendlist.value = [];
     newVal.forEach(async(v, i) => {
-        // console.log(v.name);
         if(v.flag){
             const response = await getNovelsByTag(v.id);
-            // console.log(response.data.data);
             response.data.data.forEach(item => {
-            if (!recommendlist.value.some(recommendItem => recommendItem.id === item.id)) {
-                recommendlist.value.push(item);
-            }
-});
-
+                if (!recommendlist.value.some(recommendItem => recommendItem.id === item.id)) {
+                    recommendlist.value.push(item);
+                }
+            });
         }
     });
-    // 在这里执行你需要的代码
 }, {
     deep: true // 如果 likelist 是一个对象或数组，你可能需要设置 deep: true 来深度监听其内部变化
 });
-
 </script>
 
 <template>
@@ -56,10 +51,17 @@ watch(likelist, async (newVal, oldVal) => {
                         <div class="recommend-img">
                             <img :src="`${v.img_url}`" alt="">
                         </div>
-                        <div class="recommend-title">
+                        <div class="recommend-info">
                             <h4>{{ v.title }}</h4>
-                            <p class="recommend-title-author">{{ v.author }} 著</p>
-                            <p class="recommend-title-desc">{{ v.summary }}</p>
+                            <p class="recommend-info-author">{{ v.author }} 著</p>
+                            <div class="recommend-info-tags">
+                                <ul>
+                                    <li v-for="(v1,i1) in v.tags" :key="i1">
+                                        {{ v1.name }}
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="recommend-info-summary">{{ v.summary }}</p>
                         </div>
                             
                     </li>

@@ -47,7 +47,7 @@ const novels = [
     {id:10000002,
     title: '天幕 暗黑丛林', 
     author: '楼笑羽', 
-    tags: [{name:'奇幻',id:3}, {name:'科幻',id:2},{name:'推理',id:19}], 
+    tags: [{name:'奇幻',id:3}, {name:'科幻',id:2},{name:'推理',id:19},{name:'奇幻',id:3}, {name:'科幻',id:2},{name:'推理',id:19},{name:'奇幻',id:3}, {name:'科幻',id:2},{name:'推理',id:19},{name:'奇幻',id:3}, {name:'科幻',id:2},{name:'推理',id:19}], 
     img_url: '/src/assets/images/2.png',
     publishDate:'2020-04-22',
     summary:'这个世界中，忽然降临了一个名为天幕的小世界！ 在这个天幕世界中，有这各种的机遇和危险！ 而主角千叶在天幕世界中，理解了人性的丑恶，化为魔神！ 开始，屠杀！',

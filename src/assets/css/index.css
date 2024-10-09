@@ -330,6 +330,7 @@ html,body{
     height: 150px;
     margin-bottom: 20px;
 }
+
 .recommend-img{
     width: 28%;
 }
@@ -339,10 +340,11 @@ html,body{
     object-fit: cover;
     border-radius: 10px;
 }
-.recommend-title{
+.recommend-info{
     width: 68%;
+    height: 100%;
 }
-.recommend-title h4{
+.recommend-info h4{
     font-size: 20px;
     /* 文本不换行,超出部分隐藏,并用省略号表示超出 */
     white-space: nowrap;
@@ -350,17 +352,41 @@ html,body{
     text-overflow: ellipsis;
     height: 30px;
 }
-.recommend-title p{
+.recommend-info p{
     color: #808080;
     font-size: 15px;
 }
-.recommend-title-author{
+.recommend-info-author{
     height: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.recommend-title-desc{
+.recommend-info-tags{
+    /* height: 20px; */
+}
+.recommend-info-tags ul{
+    height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.recommend-info-tags ul::-webkit-scrollbar{
+    display: none;
+}
+.recommend-info-tags ul li{
+    height: 100%;
+    margin-right: 5px;
+    padding: 5px;
+    font-weight: 700;
+    background: var(--bgcolorLight);
+    border-radius: 8px;
+}
+
+.recommend-info-summary{
     /* 将元素设置为块级弹性盒子模型 */
     display: -webkit-box;
     overflow: hidden;
@@ -369,7 +395,7 @@ html,body{
     而其他设置（如 word-break）又不允许在单词内部断行，那么 overflow-wrap: break-word; 会允许在单词内部进行换行。 */
     overflow-wrap: break-word;
     /* 限制块容器显示的文本行数  只显示4行*/
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     /* 设置弹性子元素的方向 子元素将垂直排列*/
     -webkit-box-orient: vertical;
 }
