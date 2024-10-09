@@ -1,23 +1,19 @@
 <!-- 头部 -->
 <script setup>
 import { ref } from 'vue';
+import HeaderHd from '@/components/header/HeaderHd.vue';
 </script>
 
 <template>
  
         <div class="header">
-            <div class="header-search">
-                <!-- 搜索栏 -->
-                <div class="search-list">
-                    <i class="iconfont icon-sousuo"></i>
-                    <input type="text" placeholder="请输入书名,作者">
-                </div>
-            </div>
+            <!-- 头部搜索栏 -->
+            <HeaderHd />
             <!-- 头部导航栏 -->
             <div>
                 <van-sticky>
                     <ul class="header-tabs">
-                    <li>推荐</li>
+                    <li style="color: white;">首页</li>
                     <li>男生</li>
                     <li>女生</li>
                     <li>图书</li>

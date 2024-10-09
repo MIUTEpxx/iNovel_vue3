@@ -82,21 +82,39 @@ html,body{
     /* 使用视口宽度单位（vw），100vw 等于视口宽度的100%。 */
     /* width: 100vw; */
 }
+.header-hd{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--bgcolor);
+}   
 .header-search{
     background-color: var(--bgcolor);
     padding: 10px;
-    
+    margin-top: 10px;
 }
 .search-list{
-     background-color: rgba(255, 251, 251, 0.5);
-     border-radius: 10px;
-     padding:5px;
+    width: 280px;
+    background-color: rgba(255, 251, 251, 0.5);
+    border-radius: 10px;
+    padding:5px;
 }
 .header-search input{
-    border: 0;
-    background-color: transparent;
-    margin-left: 10px;
+   border: 0;
+   background-color: transparent;
+   margin-left: 10px;
 }
+
+.header-user .user-img{
+    width: 40px;
+    height: 40px;
+    margin: 12px 15px 0 0;
+;
+}
+.header-user .user-img img{
+    border-radius: 50%;
+}
+
 .header-tabs{
     display: flex;
     justify-content: space-around;
