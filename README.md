@@ -32,7 +32,7 @@ npm run dev
 
 ![](public/GIF 2024-10-9 10-53-36.gif)
 
-![]([iNovel_vue3/public/GIF 2024-10-9 10-53-36.gif at main · MIUTEpxx/iNovel_vue3 (github.com)](https://github.com/MIUTEpxx/iNovel_vue3/blob/main/public/GIF 2024-10-9 10-53-36.gif))
+![](https://github.com/MIUTEpxx/iNovel_vue3/blob/main/public/GIF%202024-10-9%2010-53-36.gif)
 
 ## 目前已完成目标
 
