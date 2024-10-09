@@ -1,7 +1,8 @@
 <!-- 为你推荐 -->
 <script setup>
-import { ref,onMounted,provide,watch  } from 'vue';
 import Like from './like.vue';
+import NovelItem from '@/components/novelInfo/NovelItem.vue';
+import { ref,onMounted,provide,watch  } from 'vue';
 import { getNovelTags,getNovelsByTag} from '@/api/novel'; // 获取标签API
 
 let recommendlist=ref([])//筛选后的小说                                                            
@@ -47,27 +48,15 @@ watch(likelist, async (newVal, oldVal) => {
             </div>
             <div class="recommend-list">
                 <ul>
-                    <li v-for="(v,i) in recommendlist" :key="i">
-                       <router-link :to="{
-                                name: 'novel',
-                                params: { id: v.id },
-                        }">
-                            <div class="recommend-img">
-                                <img :src="`${v.img_url}`" alt="">
-                            </div>
-                            <div class="recommend-info">
-                                <h4>{{ v.title }}</h4>
-                                <p class="recommend-info-author">{{ v.author }} 著</p>
-                                <div class="recommend-info-tags">
-                                    <ul>
-                                        <li v-for="(v1,i1) in v.tags" :key="i1">
-                                            {{ v1.name }}
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p class="recommend-info-summary">{{ v.summary }}</p>
-                            </div>
-                        </router-link>
+                    <li v-for="(novel, index) in recommendlist" :key="index">
+                        <NovelItem
+                            :novelId="novel.id"
+                            :novelImgUrl="novel.img_url"
+                            :novelTitle="novel.title"
+                            :novelAuthor="novel.author"
+                            :novelTags="novel.tags"
+                            :novelSummary="novel.summary"
+                        />
                     </li>
                 </ul>
             </div>
