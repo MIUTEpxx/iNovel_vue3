@@ -324,7 +324,7 @@ html,body{
     bottom: 7px;
     left: 0;
 }
-.recommend-list ul li{
+.recommend-list ul li a{
     display: flex;
     justify-content: space-between;
     height: 150px;
@@ -382,6 +382,7 @@ html,body{
     margin-right: 5px;
     padding: 5px;
     font-weight: 700;
+    color: var(--selectcolor);
     background: var(--bgcolorLight);
     border-radius: 8px;
 }

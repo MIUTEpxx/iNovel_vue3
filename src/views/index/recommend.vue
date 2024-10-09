@@ -48,22 +48,26 @@ watch(likelist, async (newVal, oldVal) => {
             <div class="recommend-list">
                 <ul>
                     <li v-for="(v,i) in recommendlist" :key="i">
-                        <div class="recommend-img">
-                            <img :src="`${v.img_url}`" alt="">
-                        </div>
-                        <div class="recommend-info">
-                            <h4>{{ v.title }}</h4>
-                            <p class="recommend-info-author">{{ v.author }} 著</p>
-                            <div class="recommend-info-tags">
-                                <ul>
-                                    <li v-for="(v1,i1) in v.tags" :key="i1">
-                                        {{ v1.name }}
-                                    </li>
-                                </ul>
+                       <router-link :to="{
+                                name: 'novel',
+                                params: { id: v.id },
+                        }">
+                            <div class="recommend-img">
+                                <img :src="`${v.img_url}`" alt="">
                             </div>
-                            <p class="recommend-info-summary">{{ v.summary }}</p>
-                        </div>
-                            
+                            <div class="recommend-info">
+                                <h4>{{ v.title }}</h4>
+                                <p class="recommend-info-author">{{ v.author }} 著</p>
+                                <div class="recommend-info-tags">
+                                    <ul>
+                                        <li v-for="(v1,i1) in v.tags" :key="i1">
+                                            {{ v1.name }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="recommend-info-summary">{{ v.summary }}</p>
+                            </div>
+                        </router-link>
                     </li>
                 </ul>
             </div>
