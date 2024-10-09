@@ -30,7 +30,7 @@ npm run dev
 
 **新增:搜索结果页面**
 
-![](public/GIF 2024-10-9 10-53-36.gif)
+![](public/GIF 2024-10-9 11-18-42.gif)
 
 ![](https://github.com/MIUTEpxx/iNovel_vue3/blob/main/public/GIF%202024-10-9%2010-53-36.gif)
 
