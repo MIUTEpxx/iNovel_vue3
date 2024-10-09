@@ -60,6 +60,7 @@ const routes=[
 
       },
       {
+        //:id表示对应的小说id
         path: '/reader/:id',
         meta: {
           title: '小说阅读器'
@@ -67,6 +68,16 @@ const routes=[
         name: 'reader',
         component: () => import("../views/novel/reader.vue"),
       },
+      {
+        // :keyword? 表示 keyword 是一个可选的动态参数。这意味着URL可以只是 /search，也可以是 /search/some_keyword
+        path: '/search/:keyword?',
+        meta: {
+          title: '搜索结果页面'
+        },
+        name: 'search',
+        component: () => import("../views/search/index.vue"),
+      },
+      
 ]
 //创建一个路由实例
 const router=createRouter({
@@ -82,10 +93,16 @@ router.beforeEach((to, from, next) => {
    // 创建一个正则表达式对象来匹配以 '/novel' 开头的路径
    const novelRegex = /\/novel(.*)/;
    const novelRegex2 = /\/read(.*)/;
-    if (to.path === '/login'||novelRegex.test(to.path)||novelRegex2.test(to.path)) {
-      store.commit('setTabBarShow', false);
-    } else {
+    // if (to.path === '/login'||novelRegex.test(to.path)||novelRegex2.test(to.path)) {
+    //   store.commit('setTabBarShow', false);
+    // } else {
+    //   store.commit('setTabBarShow', true);
+    // }
+    // next();
+    if (to.path === '/index'||to.path === '/community'||to.path === '/welfare'||to.path === '/my') {
       store.commit('setTabBarShow', true);
+    } else {
+      store.commit('setTabBarShow', false);
     }
     next();
   });
