@@ -22,13 +22,23 @@ npm run dev
 
 ## 页面效果展示
 
+**总览动态图**
+
 ![](public/GIF 2024-10-4 22-22-06.gif)
 
 ![](https://github.com/MIUTEpxx/iNovel_vue3/blob/main/public/GIF%202024-10-4%2022-22-06.gif)
 
+**新增:搜索结果页面**
+
+![](public/GIF 2024-10-9 10-53-36.gif)
+
+![](https://github.com/MIUTEpxx/iNovel_vue3/blob/main/public/GIF 2024-10-9 10-53-36.gif)
+
 ## 目前已完成目标
 
 主要页面的布局和样式
+
+小说搜索
 
 vuex管理底部导航栏的显示
 
@@ -49,8 +59,6 @@ mockjs模拟后端接口,拦截Axios请求
 根据已选择的喜好标签筛选小说
 
 ## 待实现目标
-
-小说搜索
 
 用户账号系统
 
