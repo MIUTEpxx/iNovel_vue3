@@ -947,3 +947,10 @@ html,body{
   .reader-content h1{
     margin-bottom: 10px;
   }
+/* ---------- 搜索结果页面 ----------*/
+
+
+.sort-tabs .van-tabs__line{
+    background:var(--bgcolorLight);
+    bottom:20px;
+}
